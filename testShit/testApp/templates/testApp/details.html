@@ -10,7 +10,8 @@
 
 {% block body %}
 
-     <article>
+    {% if meetE %}
+        <article>
             <img src="" alt="">
 
             <section id="location">
@@ -31,5 +32,9 @@
                 LOl
             </section>
         </article>
+    {% else %}
+        <p>Bruh</p>
+    {% endif %}
+
 
 {% endblock %}
