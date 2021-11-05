@@ -1,15 +1,16 @@
+{% extends 'testApp/base/base.html'%}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{selected.title}}</title>
-    <link rel="stylesheet" href="{% static 'testApp/styles/base.css' %}">
-    <link rel="stylesheet" href="{% static 'testApp/styles/selectedShit.css' %}">
-</head>
-<body>
-    <main>
-        <article>
+
+{% block title %}{{selected.title}}{% endblock %}
+
+{% block site_css %} <link rel="stylesheet" href="{% static 'testApp/styles/selectedShit.css' %}">{% endblock %}
+
+{% block main_heading %}{{selected.title}}{% endblock %}
+
+{% block body %}
+
+     <article>
             <img src="" alt="">
 
             <section id="location">
@@ -30,6 +31,5 @@
                 LOl
             </section>
         </article>
-    </main>
-</body>
-</html>
+
+{% endblock %}
