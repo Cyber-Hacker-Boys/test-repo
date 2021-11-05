@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{selected.title}}</title>
+    <link rel="stylesheet" href="{% static 'testApp/styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'testApp/styles/selectedShit.css' %}">
+</head>
+<body>
+    <main>
+        <article>
+            <img src="" alt="">
+
+            <section id="location">
+                <h2>Watchu Want fam?</h2>
+                <address>You are here <span>LOCATION</span> Address</address>
+            </section>
+
+            <section id="details">
+                <h2>Here is the deeds</h2>
+                <p>{{selected.description}}</p>
+                <footer>
+                    <p>Need even more info??? Contact <a href="#">Joe Mama</a></p>
+                </footer>
+            </section>
+
+            <section id="registration">
+                <h2>Piss Off</h2>
+                LOl
+            </section>
+        </article>
+    </main>
+</body>
+</html>

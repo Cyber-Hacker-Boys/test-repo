@@ -5,16 +5,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'testApp/styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'testApp/styles/allShit.css' %}">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>Shit</p>
-    {% if showM %}
-        {% for randomI in randoms%}
-            <p>{{ randomI.title }}</p>
-        {% endfor %}
-    {% else %}
-        <p>Nothing found</p>
-    {% endif %}
+    <header id="main-header">
+        <nav><a href="/test" id="main-logo">Ranomd Course</a></nav>
+        <header>Great Shit coming up!</header>
+        <p>LOL</p>
+    </header>
+    <main>
+        <h2>LIST</h2>
+        <ol>
+            {% for randomI in randoms %}
+                <li class="meetup-item">
+                    <article>
+                        <div class="meetup-summary">
+                            <div class="meetup-image">
+                                <img src="" alt="">
+                            </div>
+                            <div class="meetup-details">
+                                <h3>{{ randomI.title }}</h3>
+                                <address>{{ randomI.location }}</address>
+                            </div>
+                        </div>
+                        <div class="meetup-actions">
+                            <a href="{% url 'detail' randomI.slug %}" class="btn">More Details</a>
+                        </div>
+                    </article>
+                </li>
+            {% endfor%}
+        </ol>
+    </main>
 </body>
 </html>
