@@ -14,7 +14,7 @@
     <h2>LIST</h2>
         <ol>
             {% for randomI in randoms %}
-                {% include 'testApp/includes/listSHit.html' with title=randomI.title location='kik' slug=randomI.slug %}
+                {% include 'testApp/includes/listSHit.html' with title=randomI.title image=randomI.image.url location='kik' slug=randomI.slug %}
             {% endfor%}
         </ol>
 {% endblock %}
