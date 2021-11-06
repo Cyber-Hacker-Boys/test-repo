@@ -12,11 +12,11 @@
 
     {% if meetE %}
         <article>
-            <img src="" alt="">
+            <img id="main-image" src="{{selected.image.url}}" alt="{{selected.title}}">
 
             <section id="location">
                 <h2>Watchu Want fam?</h2>
-                <address>You are here <span>LOCATION</span> Address</address>
+                <address>You are here <span>{{image.ass.name}}</span> {{image.ass.address}}</address>
             </section>
 
             <section id="details">
@@ -29,7 +29,14 @@
 
             <section id="registration">
                 <h2>Piss Off</h2>
-                LOl
+                <form>
+                    <ul>
+                        {{ form.as_ul }}
+                    </ul>
+                    <div id="registration-actions">
+                        <button>Register</button>
+                    </div>
+                </form>
             </section>
         </article>
     {% else %}
