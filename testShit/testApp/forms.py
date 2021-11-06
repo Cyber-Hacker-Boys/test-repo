@@ -1,9 +1,6 @@
 from django import forms
 
-from .models import Master
 
+class RegistrarionForm(forms.Form):
+    email = forms.EmailField(label='Your ass')
 
-class RegistrarionForm(forms.ModelForm):
-    class Meta:
-        model = Master
-        fields = ['email']

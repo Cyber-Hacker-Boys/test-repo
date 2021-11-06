@@ -29,7 +29,8 @@
 
             <section id="registration">
                 <h2>Piss Off</h2>
-                <form>
+                <form action="{% url 'detail' selected.slug %}" method="post">
+                    {% csrf_token %}
                     <ul>
                         {{ form.as_ul }}
                     </ul>

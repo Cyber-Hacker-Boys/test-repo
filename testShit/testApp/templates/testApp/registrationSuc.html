@@ -1,0 +1,24 @@
+{% extends 'testApp/base/base.html' %}
+
+{% load static %}
+
+{% block title %}You registered successfully!{% endblock %}
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'testApp/styles/win.css' %}">
+{% endblock %}
+
+{% block main_heading %}Thanks for signing up!{% endblock %}
+
+{% block body %}
+<section id="confirmation">
+  <h2>Fuck YOu successfully!</h2>
+  <p>Thanks for dont giving a fuck!</p>
+  <p>Got questions or can't make it? Please <a href="mailto:{{ organizer_email }}">contact nobody!</a> ahead of time!</p>
+</section>
+
+<section id="continue">
+  <p>Of course you can sign up for more than one ass!</p>
+  <p><a href="/testApp" class="btn">Explore our SHIT</a></p>
+</section>
+{% endblock %}
